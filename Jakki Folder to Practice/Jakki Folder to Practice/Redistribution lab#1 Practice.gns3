@@ -1,0 +1,717 @@
+{
+    "auto_start": false,
+    "name": "Redistribution lab#1 Practice",
+    "project_id": "1f4a9827-647d-4c36-8cdd-b57ce372c1fc",
+    "revision": 3,
+    "topology": {
+        "ellipses": [
+            {
+                "border_color": "#0000ff",
+                "border_style": 2,
+                "color": "#0000ff",
+                "height": 153.0,
+                "width": 442.0,
+                "x": -243.0,
+                "y": -89.0,
+                "z": -1.0
+            },
+            {
+                "border_style": 2,
+                "color": "#55aa00",
+                "height": 293.0,
+                "width": 346.0,
+                "x": -465.0,
+                "y": -7.0,
+                "z": -1.0
+            },
+            {
+                "border_style": 2,
+                "color": "#ff00ff",
+                "height": 286.0,
+                "width": 388.0,
+                "x": 48.0,
+                "y": -3.0,
+                "z": -1.0
+            }
+        ],
+        "links": [
+            {
+                "description": "Link from R1 port Serial1/0 to R2 port Serial1/0",
+                "destination_node_id": 6,
+                "destination_port_id": 49,
+                "id": 1,
+                "source_node_id": 5,
+                "source_port_id": 41
+            },
+            {
+                "description": "Link from R2 port Serial1/1 to R4 port Serial1/0",
+                "destination_node_id": 8,
+                "destination_port_id": 65,
+                "id": 2,
+                "source_node_id": 6,
+                "source_port_id": 50
+            },
+            {
+                "description": "Link from R1 port Serial1/1 to R3 port Serial1/0",
+                "destination_node_id": 7,
+                "destination_port_id": 57,
+                "id": 3,
+                "source_node_id": 5,
+                "source_port_id": 42
+            }
+        ],
+        "nodes": [
+            {
+                "description": "Router c7200",
+                "dynamips_id": 8,
+                "id": 8,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R4",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R2 on port Serial1/1",
+                        "id": 65,
+                        "link_id": 2,
+                        "name": "Serial1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 66,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 67,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 68,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 69,
+                        "name": "FastEthernet2/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 70,
+                        "name": "FastEthernet2/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 71,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 72,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 2003,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlesleep": 30,
+                    "image": "c7200-advipservicesk9-mz.152-4.S5.image",
+                    "mac_addr": "ca08.77e8.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R4",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "slot2": "PA-2FE-TX",
+                    "sparsemem": true,
+                    "startup_config": "configs/i8_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "84b950da-91d0-4fe9-b19b-c9960c135eff",
+                "x": 320.0,
+                "y": 184.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 5,
+                "id": 5,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R1",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R2 on port Serial1/0",
+                        "id": 41,
+                        "link_id": 1,
+                        "name": "Serial1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R3 on port Serial1/0",
+                        "id": 42,
+                        "link_id": 3,
+                        "name": "Serial1/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 43,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 44,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 45,
+                        "name": "FastEthernet2/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 46,
+                        "name": "FastEthernet2/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 47,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 48,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 2005,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlesleep": 30,
+                    "image": "c7200-advipservicesk9-mz.152-4.S5.image",
+                    "mac_addr": "ca05.4f10.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R1",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "slot2": "PA-2FE-TX",
+                    "sparsemem": true,
+                    "startup_config": "configs/i5_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "e577af53-6bdf-4030-a4f4-78fbd690c190",
+                "x": -219.0,
+                "y": -5.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 6,
+                "id": 6,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R2",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R1 on port Serial1/0",
+                        "id": 49,
+                        "link_id": 1,
+                        "name": "Serial1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R4 on port Serial1/0",
+                        "id": 50,
+                        "link_id": 2,
+                        "name": "Serial1/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 51,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 52,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 53,
+                        "name": "FastEthernet2/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 54,
+                        "name": "FastEthernet2/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 55,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 56,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 2001,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlesleep": 30,
+                    "image": "c7200-advipservicesk9-mz.152-4.S5.image",
+                    "mac_addr": "ca06.10b8.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R2",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "slot2": "PA-2FE-TX",
+                    "sparsemem": true,
+                    "startup_config": "configs/i6_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "198a139b-7cc9-4b85-8d0e-bac9322b3c71",
+                "x": 78.0,
+                "y": -3.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 7,
+                "id": 7,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R3",
+                    "x": 20.5,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R1 on port Serial1/1",
+                        "id": 57,
+                        "link_id": 3,
+                        "name": "Serial1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 58,
+                        "name": "Serial1/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 59,
+                        "name": "Serial1/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 60,
+                        "name": "Serial1/3",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 61,
+                        "name": "FastEthernet2/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 62,
+                        "name": "FastEthernet2/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 63,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 64,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 2002,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlesleep": 30,
+                    "image": "c7200-advipservicesk9-mz.152-4.S5.image",
+                    "mac_addr": "ca07.6090.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R3",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-4T+",
+                    "slot2": "PA-2FE-TX",
+                    "sparsemem": true,
+                    "startup_config": "configs/i7_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "f3b13a96-1a89-48f9-93d7-ae766cb0b457",
+                "x": -414.0,
+                "y": 175.0
+            }
+        ],
+        "notes": [
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "BGP\nAutonomous System (A.S.) 100",
+                "x": -140.0,
+                "y": -68.0
+            },
+            {
+                "color": "#ffffff",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": ".1",
+                "x": -141.0,
+                "y": 23.0
+            },
+            {
+                "color": "#ffffff",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": ".2",
+                "x": 62.0,
+                "y": 24.0
+            },
+            {
+                "color": "#ffff7f",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "Network 65.0.1.0 /30",
+                "x": -120.0,
+                "y": -23.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "Redistribution \nLAB Part 1",
+                "x": -68.0,
+                "y": -135.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "1. Console into Router (X) (Double click Router 0, CLI, press ENTER ENTER, type: no, press ENTER, type: yes, press ENTER, type: enable then press ENTER ENTER)",
+                "x": -963.0,
+                "y": -431.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "2. For Router 1 and 2, Configure BGP with A.S. 100 and network 65.0.1.0 /30 (type: config t, press ENTER ENTER, type: router BGP 100, then press ENTER ENTER, type: network 65.0.1.0 mask 255.255.255.252, press ENTER ENTER, type: end, \npress ENTER ENTER) ",
+                "x": -964.0,
+                "y": -406.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "3. For Router 1 and 2 Configure your BGP neighbor=(the IP of the BGP neighbor router you're connected with, 65.0.x.x, and the A.S. that neighbor router is in A.S. x00) so BGP will know who your neighbor router is/are (type: config t, \npress ENTER ENTER, type: router BGP (x)00, press ENTER ENTER, type: neighbor 65.0.(x).(x) remote-as (x)00, press ENTER ENTER, type: end, press ENTER ENTER)",
+                "x": -964.0,
+                "y": -368.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "6. Configure Router 1 and 2's the interfaces Serial (x)/0 with IP address x.x.x /x, portrayed in the topology (type: config t, press ENTER ENTER, type: interface serial x/0, press ENTER, type: ip address x.x.x.x 255.255.255.x, \npress ENTER ENTER, type: no shut, press ENTER ENTER, type: end, press ENTER ENTER, type: wr, press ENTER ENTER) (repeat steps for other interfaces)",
+                "x": -967.0,
+                "y": -262.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "Press the play button |> to turn on the routers",
+                "x": -917.0,
+                "y": -491.0
+            },
+            {
+                "color": "#ffffff",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": ".1",
+                "x": -349.0,
+                "y": 179.0
+            },
+            {
+                "color": "#ffffff",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": ".1",
+                "x": 127.0,
+                "y": 45.0
+            },
+            {
+                "color": "#ffffff",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": ".2",
+                "x": -203.0,
+                "y": 48.0
+            },
+            {
+                "color": "#ffffff",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": ".2",
+                "x": 296.0,
+                "y": 186.0
+            },
+            {
+                "color": "#000000",
+                "font": "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0",
+                "text": "Network 10.0.3.0 /24",
+                "x": 117.0,
+                "y": 137.0
+            },
+            {
+                "color": "#000000",
+                "font": "MS Shell Dlg 2,8,-1,5,75,0,0,0,0,0",
+                "text": "Network 10.0.2.0 /24",
+                "x": -302.0,
+                "y": 127.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "EIGRP\nA.S. 300",
+                "x": 321.0,
+                "y": 110.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "EIRGRP\nA.S. 200",
+                "x": -408.0,
+                "y": 104.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "Press View and click on (show/hide interfaces labels) to see interface labels in the topology",
+                "x": -919.0,
+                "y": -466.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "4. For Router 1 and 2, Configure EIGRP with A.S. (x)00 and network 10.0.x.0 /24 (type: config t, press ENTER ENTER, type: router EIGRP (x)00, then press ENTER ENTER, type: network 10.0.(x).0 0.0.0.255, press ENTER ENTER, type: end, \npress ENTER ENTER) ",
+                "x": -966.0,
+                "y": -330.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "5. For Router 1 and 2, Redistribute EIGRP into BGP (config t, press ENTER ENTER, type: router BGP 100, press ENTER ENTER, type: redistribute EIGRP (x)00, press ENTER ENTER, type: end, press ENTER ENTER",
+                "x": -967.0,
+                "y": -290.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "8. Configure Router 3 and 4's interfaces Serial (x)/0 with IP address x.x.x /x, portrayed in the topology (type: config t, press ENTER ENTER, type: interface serial x/0, press ENTER, type: ip address x.x.x.x 255.255.255.x, \npress ENTER ENTER, type: no shut, press ENTER ENTER, type: end, press ENTER ENTER, type: wr, press ENTER ENTER) ",
+                "x": -968.0,
+                "y": -177.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "7. For Router 3 and 4, Configure EIGRP with A.S. (x)00 and network 10.0.x.0 /24 (type: config t, press ENTER ENTER, type: router EIGRP (x)00, then press ENTER ENTER, type: network 10.0.(x).0 0.0.0.255, press ENTER ENTER, type: end, \npress ENTER ENTER) ",
+                "x": -968.0,
+                "y": -220.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "9. Configure a static default-route for Router 3 and 4 pointing to their gateway router (config t, press ENTER ENTER,\ntype: ip route 0.0.0.0 0.0.0.0 10.0.x.x, press ENTER ENTER, type: end, press ENTER ENTER, type: wr, press ENTER ENTER)",
+                "x": -968.0,
+                "y": -132.0
+            },
+            {
+                "color": "#000000",
+                "font": "MS Shell Dlg 2,6,-1,5,75,0,0,0,0,0",
+                "text": "Gateway",
+                "x": 93.0,
+                "y": 18.0
+            },
+            {
+                "color": "#000000",
+                "font": "MS Shell Dlg 2,6,-1,5,75,0,0,0,0,0",
+                "text": "Gateway",
+                "x": -206.0,
+                "y": 16.0
+            },
+            {
+                "color": "#000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "ping and traceroute to all IP addresses from every router",
+                "x": -964.0,
+                "y": -52.0
+            }
+        ],
+        "rectangles": [
+            {
+                "color": "#ff0000",
+                "height": 43.0,
+                "width": 221.0,
+                "x": -139.0,
+                "y": -70.0
+            },
+            {
+                "color": "#ff0000",
+                "height": 38.0,
+                "width": 75.0,
+                "x": -415.0,
+                "y": 103.0
+            },
+            {
+                "color": "#ff0000",
+                "height": 41.0,
+                "width": 75.0,
+                "x": 313.0,
+                "y": 111.0
+            }
+        ],
+        "servers": [
+            {
+                "cloud": false,
+                "host": "127.0.0.1",
+                "id": 1,
+                "local": true,
+                "port": 8000
+            }
+        ]
+    },
+    "type": "topology",
+    "version": "1.3.11"
+}

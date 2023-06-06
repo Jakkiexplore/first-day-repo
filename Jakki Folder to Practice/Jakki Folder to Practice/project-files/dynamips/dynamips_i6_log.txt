@@ -1,0 +1,39 @@
+Feb 11 20:12:44.892 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Feb 11 20:12:44.893 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 57029.
+Feb 11 20:12:44.962 HYPERVISOR: exec_cmd: hypervisor version 
+Feb 11 20:12:44.963 HYPERVISOR: exec_cmd: hypervisor uuid 
+Feb 11 20:12:44.963 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\work\Desktop\Default Folder to Practice\project-files\dynamips 
+Feb 11 20:12:45.200 GENERAL: working_dir=C:\Users\work\Desktop\Default Folder to Practice\project-files\dynamips
+Feb 11 20:12:45.200 HYPERVISOR: exec_cmd: vm create R2 2 c7200 
+Feb 11 20:12:45.202 VM: VM R2 created.
+Feb 11 20:12:45.203 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 2002 
+Feb 11 20:12:45.204 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Feb 11 20:12:45.204 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 11 20:12:45.204 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Feb 11 20:12:45.205 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Feb 11 20:12:45.205 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Feb 11 20:12:45.206 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 11 20:12:45.206 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-4T+ 
+Feb 11 20:12:45.207 HYPERVISOR: exec_cmd: c7200 set_mac_addr R2 ca02.0aec.0000 
+Feb 11 20:12:45.207 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 11 20:12:45.208 HYPERVISOR: exec_cmd: vm slot_remove_binding R2 0 0 
+Feb 11 20:12:45.208 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 11 20:12:45.209 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-2FE 
+Feb 11 20:12:45.210 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 11 20:12:45.211 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 PA-2FE-TX 
+Feb 11 20:12:45.211 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Feb 11 20:12:45.212 HYPERVISOR: exec_cmd: vm set_ios R2 C:\Users\work\GNS3\images\IOS\c7200-advipservicesk9-mz.152-4.S5.image 
+Feb 11 20:12:45.213 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Feb 11 20:12:45.214 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg 
+Feb 11 20:12:45.927 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Feb 11 20:12:45.928 HYPERVISOR: exec_cmd: vm set_ghost_file R2 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Feb 11 20:12:45.990 HYPERVISOR: exec_cmd: nio create_udp udp-e8a2b41e-2a23-4adc-93a6-5e9b0a3cc790 10001 127.0.0.1 10000 
+Feb 11 20:12:45.999 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-e8a2b41e-2a23-4adc-93a6-5e9b0a3cc790 
+Feb 11 20:12:46.000 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 11 20:12:53.153 HYPERVISOR: exec_cmd: vm get_status R2 
+Feb 11 20:12:53.154 HYPERVISOR: exec_cmd: vm extract_config R2 
+Feb 11 20:12:53.154 HYPERVISOR: exec_cmd: vm delete R2 
+Feb 11 20:12:53.154 VM: VM R2 destroyed.
+Feb 11 20:12:53.165 HYPERVISOR: exec_cmd: hypervisor stop 
+Feb 11 20:12:53.471 HYPERVISOR: Stopped.
+Feb 11 20:12:53.471 GENERAL: reset done.
